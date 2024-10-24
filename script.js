@@ -13,3 +13,12 @@ function getComputerChoice() {
 };
 
 let computerChoice = getComputerChoice();
+
+function getUserChoice() {
+  let selectElement = document.querySelector("#dropdown-menu");
+  document.querySelector(".output").textContent = selectElement.value;
+  return selectElement.value;
+}
+
+let userChoice;
+console.log(userChoice);

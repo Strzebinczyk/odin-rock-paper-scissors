@@ -8,5 +8,16 @@
     </head>
     <body>
         <h1>Hello!</h1>
+        <p>This is a game of rock, paper, scissors. You will play against a computer.</p>
+        <label>Select one of the options</label>
+        <select id="dropdown-menu">
+          <option value="Rock">Rock</option>
+          <option value="Paper">Paper</option>
+          <option value="Scissors">Scissors</option>
+      </select>
+      <button onclick="userChoice = getUserChoice()">Submit</button>
+      <p>Your choice is:
+        <span class="output"></span>
+      </p>
     </body>
 </html>
