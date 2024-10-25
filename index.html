@@ -10,17 +10,21 @@
         <h1>Hello!</h1>
         <p>This is a game of rock, paper, scissors. You will play against a computer.</p>
         <label>Select one of the options</label>
-        <select id="dropdown-menu">
+        <select id="dropdownMenu">
           <option value="Rock">Rock</option>
           <option value="Paper">Paper</option>
           <option value="Scissors">Scissors</option>
       </select>
-      <button onclick="getChoices()">Submit</button>
+      <button onclick="play()">Submit</button>
       <p>Your choice is:
         <span class="userOutput"></span>
       </p>
       <p>Computer's choice is:
         <span class="computerOutput"></span>
       </p>
+      <p>You <span class="result"></span>!</p>
+      <p>Round <span class="roundNumber"></span></p>
+      <p>Your score is: <span class="userScore"></span></p>
+      <p>Computer's score is: <span class="computerScore"></span></p>
     </body>
 </html>
