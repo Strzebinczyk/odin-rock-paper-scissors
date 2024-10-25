@@ -58,10 +58,30 @@ function adjustScore(result) {
   }
 }
 
+function declareWinner() {
+  if (userScore > computerScore) {
+    document.querySelector(".gameResult").textContent = "You win the game!";
+  } else if (userScore < computerScore) {
+    document.querySelector(".gameResult").textContent = "You lose the game!";
+  } else {
+    document.querySelector(".gameResult").textContent = "You tie the game!";
+  }
+}
+
+function resetGame() {
+  if(roundNumber > 5) {
+    declareWinner();
+    roundNumber = 1;
+    userScore = 0;
+    computerScore = 0;
+  }
+}
+
 function play() {
   userChoice = getUserChoice();
   computerChoice = getComputerChoice();
   adjustScore(playRound(userChoice, computerChoice));
+  resetGame();
 }
 
 
