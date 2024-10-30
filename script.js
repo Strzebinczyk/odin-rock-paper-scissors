@@ -80,6 +80,7 @@ function play() {
   adjustScore(playRound(userChoice, computerChoice));
   if (userScore >= 5 || computerScore >= 5) {
     declareWinner();
+    resetGame();
   }
 }
 
