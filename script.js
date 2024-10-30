@@ -76,9 +76,11 @@ function resetGame() {
 }
 
 function play() {
-  //userChoice = getUserChoice();
   computerChoice = getComputerChoice();
   adjustScore(playRound(userChoice, computerChoice));
+  if (userScore >= 5 || computerScore >= 5) {
+    declareWinner();
+  }
 }
 
 const buttons = document.querySelectorAll(".choice");
@@ -91,3 +93,5 @@ let computerChoice;
 let userScore = 0;
 let computerScore = 0;
 let roundNumber = 1;
+
+
