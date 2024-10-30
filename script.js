@@ -15,10 +15,10 @@ function getComputerChoice() {
   return result;
 };
 
-function getUserChoice() {
+function getUserChoice(e) {
   let result
-  let selectElement = document.querySelector("#dropdownMenu");
-  result = selectElement.value;
+  result = e.target.textContent;
+  userChoice=result;
   document.querySelector(".userOutput").textContent = result;
   return result;
 }
@@ -69,22 +69,22 @@ function declareWinner() {
 }
 
 function resetGame() {
-  if(roundNumber > 5) {
     declareWinner();
     roundNumber = 1;
     userScore = 0;
     computerScore = 0;
-  }
 }
 
 function play() {
-  userChoice = getUserChoice();
+  //userChoice = getUserChoice();
   computerChoice = getComputerChoice();
   adjustScore(playRound(userChoice, computerChoice));
-  resetGame();
 }
 
-
+const buttons = document.querySelectorAll(".choice");
+buttons.forEach((button) => {
+  button.addEventListener("click", getUserChoice);
+});
 
 let userChoice;
 let computerChoice;

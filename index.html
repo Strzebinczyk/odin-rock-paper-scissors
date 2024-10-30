@@ -3,18 +3,18 @@
     <head>
       <meta charset="UTF-8">
       <title>Rock Paper Scissors</title>
-      <script src="script.js"></script>
+      <script src="script.js" defer></script>
       <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
-        <h1>Hello!</h1>
-        <p>This is a game of rock, paper, scissors. You will play against a computer.</p>
-        <label>Select one of the options</label>
-        <select id="dropdownMenu">
-          <option value="Rock">Rock</option>
-          <option value="Paper">Paper</option>
-          <option value="Scissors">Scissors</option>
-      </select>
+      <h1>Hello!</h1>
+      <p>This is a game of rock, paper, scissors. You will play against a computer.</p>
+      <label>Select one of the options</label>
+      <div id="choiceContainer">
+        <button class="choice" id="rock">Rock</button>
+        <button class="choice" id="paper">Paper</button>
+        <button class="choice" id="scissors">Scissors</button>
+      </div>
       <button onclick="play()">Submit</button>
       <p>Your choice is:
         <span class="userOutput"></span>
